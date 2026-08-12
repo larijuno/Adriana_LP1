@@ -41,8 +41,8 @@ Inicio
          escreval("A sua nota final foi: ", EXF:2:2)
       fimse
    senao
-      escreval("Sua média já é menor que o mínimo necessário")
-   fimse
+      escreval("Sua média foi abaixo do mínimo necessário :(")
+fimse
 
 
 Fimalgoritmo
