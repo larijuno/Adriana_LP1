@@ -1,7 +1,7 @@
 Algoritmo "Linguagem de Programação I"
 
 Var
-   SUB,X,API,P1,E1,E2,EXF,R,R1,R2,R3: real
+   SUB,X,API,P1,E1,E2,EXF,R,R1,R2,R3,R4: real
 
 Inicio
    escreval("Calculadora de média")
@@ -15,8 +15,17 @@ Inicio
    escreva("Nota da entrega 2: ")
    leia(E2)
    escreval("")
-   escreva("Nota das atividades extras: ")
+   escreva("Nota da atividade extra: ")
    leia(X)
+   enquanto X>1 faca
+      repita
+         escreval("")
+         escreval("ERRO! A atividade extra vale no máximo 1 ponto ")
+         escreval("")
+         escreva("Nota da atividade extra: ")
+         leia(X)
+      ate   x<=1
+   fimenquanto
    escreval("")
    escreva("Nota da prova substitutiva: ")
    leia(SUB)
@@ -29,20 +38,24 @@ Inicio
    escreval("")
 
    limpatela
-   R<-((P1*0.5)+(E1*0.2)+(E2*0.3)+X+(SUB*0.15))*0.5
-   R1<-((P1*0.5)+(E1*0.2)+(E2*0.3)+X+(SUB*0.15))-5.9
+   R<-(((P1*0.5)+(E1*0.2)+(E2*0.3)+X+(SUB*0.15))*0.5)
+   R1<-(((P1*0.5)+(E1*0.2)+(E2*0.3)+X+(SUB*0.15))-5.9)
 
    se (R1>0) entao
-      R2<-(R1/R1)*API*0.5
-      R3<-R2+R
-      se (R3>EXF) entao
-         escreval("A sua nota final foi: ", R3:2:2)
-      senao
-         escreval("A sua nota final foi: ", EXF:2:2)
-      fimse
+      R2<-(R1/R1)*API*0.5 //linha de baixo, q traz o EXF
+      R3<-R2+R            //cálculo final, q se nao, traz EXF
+      escreval("A sua nota final foi: ", R3:2:2)
+      escreval("Você passou!")
    senao
-      escreval("Sua média foi abaixo do mínimo necessário :(")
-fimse
+         escreval("A sua nota do exame foi: ", EXF:2:2)
+         escreval("Você passou! (com exame)")
+      //  senao
+      //   escreval("A sua nota final foi: ", R3:2:2)
+      //    escreval("")
+      //    escreval("A sua nota do exame foi: ", EXF:2:2)
+      //   escreval("")
+      //   escreval("Sua média foi abaixo do mínimo necessário :(")
+   fimse
 
 
 Fimalgoritmo
