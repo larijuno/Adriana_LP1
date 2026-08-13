@@ -1,0 +1,117 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Compra {
+
+    //3-Compra com desconto
+    //Um supermercado oferece desconto de 10% para compras acima de R$ 100.
+    //Lucas foi comprar os seguintes itens:
+    //Arroz (tipo 1, 5 kg)
+    //Feijão (carioca ou preto, 1 kg a 2 kg)
+    //Óleo de soja (900 ml)
+    //Açúcar (refinado ou cristal, 1 kg)
+    //Café torrado e moído (250 g ou 500 g)
+    //Macarrão (espaguete ou parafuso, 500 g)
+    //Farinha de mandioca ou de trigo (1 kg ou 500 g)
+    //Fubá de milho (500 g)
+    //Molho ou extrato de tomate (300 g)
+    //Sal refinado (1 kg)
+    //Leia o valor da compra. Se o valor for maior que R$ 100, aplique o desconto;
+    //Caso contrário, mantenha o preço original.
+
+    //Mostre a listagem do caixa contendo item, quantidade, preço  parcial e o valor final a ser pago da compra.
+
+    void main () {
+        int valor,i,item;
+        float Arroz,Feijao,Oleo,Acucar,Cafe,Macarrao,Farinha,Fuba,Tomate,Sal;
+        int qtd,qtda,qtdf,qtdo,qtdac,qtdc,qtdm,qtdfar,qtdfub,qtdtom,qtdsal;
+        float desconto,resultado;
+        Scanner s = new Scanner(System.in);
+        ArrayList feijao = new ArrayList<String>();
+        int v[] = new int[4];
+        feijao.add   ("0 - Feijão Carioca         1 kg    R$ 5");
+        feijao.add   ("1 - Feijão Preto           1 kg    R$ 6");
+        feijao.add   ("2 - Feijão Carioca         2 kg    R$ 9");
+        feijao.add   ("3 - Feijão Preto           2 kg    R$ 11");
+        v[0] = 5;         v[1] = 6;        v[2] = 9;        v[3] = 11;
+
+        ArrayList acucar = new ArrayList<String>();
+       
+        acucar.add   ("0 - Açúcar Refinado        1 kg    R$ 4");
+        acucar.add   ("1 - Açúcar Cristal         1 kg    R$ 5");
+        v[0] = 5;         v[1] = 6; // trazer vqriavel para parte da escolha nas compras
+
+        ArrayList cafe = new ArrayList<String>();
+        cafe.add     ("0 - Café torrado e moído    250 g   R$ 18");
+        cafe.add     ("1 - Café torrado e moído    500 g   R$ 32");
+
+        ArrayList macarrao = new ArrayList<String>();
+        macarrao.add ("0 - Macarrão Espaguete      500 g   R$ 6");
+        macarrao.add ("1 - Macarrão Parafuso       500 g   R$ 6");
+
+        ArrayList farinha = new ArrayList<String>();
+        farinha.add  ("0 - Farinha de trigo        500 g   R$ 5");
+        farinha.add  ("1 - Farinha de mandioca     500 g   R$ 5");
+        farinha.add  ("2 - Farinha de trigo        1 kg    R$ 9");
+        farinha.add  ("3 - Farinha de mandioca     1 kg    R$ 10");
+
+        ArrayList molho = new ArrayList<String>();
+        molho.add    ("0 - Molho de tomate         300 g   R$ 3");
+        molho.add    ("1 - Extrato de tomate       300 g   R$ 4");
+
+
+        // compra ///////////////////
+
+        IO.println("    Arroz tipo 1            5 kg    R$ 25");
+        IO.println("Escolha uma quantidade:");
+        qtd = s.nextInt();
+        Arroz = (qtd*25);
+        qtd=0;
+        IO.println(Arroz);
+
+        for (i=0; i<feijao.size();i++) {
+            IO.println(feijao.get(i));
+        }
+        IO.println("Escolha uma opção");
+        item = s.nextInt();
+        IO.println(feijao.get(item));
+        IO.println("Escolha uma quantidade:");
+        qtd = s.nextInt();
+        Feijao = (qtd*v[item]);
+        qtd=0;
+        IO.println(Feijao);
+
+        IO.println("Óleo de soja (900 ml) - R$ 6");
+        IO.println("Escolha uma quantidade:");
+        qtd = s.nextInt();
+        Oleo = (qtd*6);
+        qtd=0;
+        IO.println(Oleo);
+
+        for (i=0; i<acucar.size();i++) {
+            IO.println(acucar.get(i));
+        }
+        IO.println("Escolha uma opção");
+        item = s.nextInt();
+        IO.println(acucar.get(item));
+        IO.println("Escolha uma quantidade:");
+        qtd = s.nextInt();
+        
+        Acucar = (qtd*25);
+        qtd=0;
+        IO.println(Acucar);
+
+        IO.println("Café torrado e moído (250 g) - R$ 18");
+        IO.println("Café torrado e moído (500 g) - R$ 32");
+        IO.println("Macarrão (espaguete, 500 g) - R$ 6");
+        IO.println("Macarrão (parafuso, 500 g) - R$ 6");
+        IO.println("Farinha de trigo (500 g) - R$ 5");
+        IO.println("Farinha de mandioca (500 g) - R$ 5");
+        IO.println("Farinha de trigo (1 kg) - R$ 9");
+        IO.println("Farinha de mandioca (1 kg) - R$ 10");
+        IO.println("Fubá de milho (500 g) - R$ 4");
+        IO.println("Molho de tomate (300 g) - R$ 3");
+        IO.println("Extrato de tomate (300 g) - R$ 3");
+        IO.println("Sal refinado (1 kg) - R$ 2");
+    }
+}
