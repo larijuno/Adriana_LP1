@@ -27,6 +27,7 @@ void main (){
         IO.println(num1 + " não é múltiplo de " + num2 );
         }
     }
+    // Código original
   /*  else {
         if ((num2%num1) == 0 ) {
             IO.println(num2 + " é múltiplo de " + num1 );
