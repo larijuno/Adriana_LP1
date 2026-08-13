@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Login {
+
+//A senha correta é 1234.
+//Entrada: Senha digitada.
+//Processamento: Comparar com a senha cadastrada.
+//Saída: "Acesso permitido" ou "Acesso negado".
+
+    void main() {
+        int senha;
+        Scanner s = new Scanner(System.in);
+
+        IO.println("Bem vindo(a)!");
+        IO.println("Digite sua senha:");
+        senha = s.nextInt();
+
+        if (senha == 1234) {
+            IO.println("Acesso permitido");
+        }
+        else {IO.println ("Acesso negado");}
+    }
+}
