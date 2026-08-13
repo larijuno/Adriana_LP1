@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Multiplos {
+
+void main (){
+    int num1;
+    int num2;
+    int x;
+    Scanner s = new Scanner(System.in);
+
+    IO.println("Digite um número");
+    num1=s.nextInt();
+
+    IO.println("Digite um número");
+    num2=s.nextInt();
+
+    if (num1<num2) {
+        x = num1;
+        num1 = num2;
+        num2 = x;
+    }
+        if ((num1%num2) == 0 ) {
+            IO.println(num1 + " é múltiplo de " + num2 );
+            IO.println("O resultado é " + num1/num2);
+        }
+        else {
+        IO.println(num1 + " não é múltiplo de " + num2 );
+        }
+    }
+  /*  else {
+        if ((num2%num1) == 0 ) {
+            IO.println(num2 + " é múltiplo de " + num1 );
+            IO.println("O resultado é " + num2/num1);
+        }
+        else {
+            IO.println(num2 + " não é múltiplo de " + num1 );
+        }
+    } */
+}
