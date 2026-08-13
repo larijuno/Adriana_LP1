@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+//Entrada: Dois números inteiros.
+//Processamento: Verificar se o primeiro é múltiplo do segundo.
+//Saída: Resultado da verificação.
+
 public class Multiplos {
 
 void main (){
