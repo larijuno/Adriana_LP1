@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class aluguel {
+
+    //Leia a quantidade de dias e a quilometragem percorrida.
+    // Calcule o preço do aluguel considerando uma diária fixa
+    // e uma cobrança adicional por quilômetro acima de determinado limite.
+
+    void main (){
+        int dia;
+        float km, limiteKm, precoBase, kmExtra, taxaExtra, precoTotal;
+        Scanner s = new Scanner(System.in);
+
+        IO.println("Regras: Diária R$ 90.00 | " +
+                "100 km inclusos por dia | " +
+                "R$ 0.50 por km extra.");
+
+
+        System.out.print("Digite a quantidade de dias que o carro foi alugado: ");
+        dia = s.nextInt();
+
+        System.out.print("Digite a quilometragem percorrida: ");
+        km = s.nextFloat();
+
+        limiteKm = dia * 100;
+        precoBase = dia * 90;
+
+        if (km > limiteKm) {
+            kmExtra = km - limiteKm;
+            taxaExtra = kmExtra * 0.50f;
+            precoTotal = precoBase + taxaExtra;
+
+            IO.println("Preço das diárias: R$ " + precoBase);
+            IO.println("Km excedidos: " + kmExtra + " km");
+            IO.println("Taxa extra por km: R$ " + taxaExtra);
+
+        } else {
+            precoTotal = precoBase;
+            IO.println("Dentro do limite de km do plano.");
+        }
+        IO.println("O valor total do aluguel ficou: R$ " + precoTotal);
+    }
+}
