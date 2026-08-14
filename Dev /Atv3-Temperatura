@@ -1,0 +1,37 @@
+public class Temperatura {
+    
+    //Uma estação meteorológica registrou a temperatura média do município de São José dos Campos.
+    // Leia cada temperatura em graus Celsius. Se estiver abaixo de 18 °C, informe "Frio"; 
+    // caso contrário, informe "Temperatura agradável". 
+    // Em seguida, determine se em São José dos Campos a temperatura é, em geral, agradável ou faz frio.
+    
+    void main() {
+        int soma = 0;
+        double media;
+        String[] meses = {
+                "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
+                "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+        };
+        int[] temp = {
+                24, 24, 24, 22, 19, 18,
+                18, 19, 20, 22, 23, 24
+        };
+        for (int i = 0; i < meses.length; i++) {
+            if (temp[i] < 18) {
+                IO.println(meses[i] + " " + temp[i] + "ºC: Frio");
+            } else {
+                IO.println(meses[i] + " " + temp[i] + "ºC: Temperatura agradável.");
+            }
+
+            soma += temp[i];
+        }
+
+        media = soma/12;
+        IO.println("Média anual de 2025: " + media + "ºC");
+        if (media < 18) {
+            IO.println("Em geral, a temperatura em São José dos Campos é fria.");
+        } else {
+            IO.println("Em geral, a temperatura em São José dos Campos é agradável.");
+        }
+    }
+}
