@@ -7,192 +7,199 @@ public class compras {
     //Um supermercado oferece desconto de 10% para compras acima de R$ 100.
     //Lucas foi comprar os seguintes itens:
     //Arroz (tipo 1, 5 kg)
-    //Feijão (carioca ou preto, 1 kg a 2 kg)
+    //Feijão (carSystem.outca ou preto, 1 kg a 2 kg)
     //Óleo de soja (900 ml)
     //Açúcar (refinado ou cristal, 1 kg)
     //Café torrado e moído (250 g ou 500 g)
     //Macarrão (espaguete ou parafuso, 500 g)
-    //Farinha de mandioca ou de trigo (1 kg ou 500 g)
+    //Farinha de mandSystem.outca ou de trigo (1 kg ou 500 g)
     //Fubá de milho (500 g)
     //Molho ou extrato de tomate (300 g)
     //Sal refinado (1 kg)
-    //Leia o valor da compra. Se o valor for maior que R$ 100, aplique o desconto;
-    //Caso contrário, mantenha o preço original.
+    //Leia o valor da compra. Se o valor for maSystem.outr que R$ 100, aplique o desconto;
+    //Caso contrárSystem.out, mantenha o preço original.
 
     //Mostre a listagem do caixa contendo item, quantidade, preço  parcial e o valor final a ser pago da compra.
 
     void main () {
-        int valor,i,item;
-        float Arroz,Feijao,Oleo,Acucar,Cafe,Macarrao,Farinha,Fuba,Tomate,Sal;
-        int qtd;
-        float desconto,resultado;
+        int i,item;
+        float Valor,Total,Arroz,Feijao,Oleo,Acucar,Cafe,Macarrao,Farinha,Fuba,Tomate,Sal;
+        int qtd,qtda,qtdb,qtdc,qtdd,qtde,qtdf,qtdg,qtdh,qtdi,qtdj,qtdk;
+        float desconto,total;
         Scanner s = new Scanner(System.in);
 
         // Lista //////////////////////////////////////////////////////////////////////
 
         ArrayList feijao = new ArrayList<String>();
         int v[] = new int[400];
-        feijao.add   ("0 - Feijão Carioca         1 kg    R$ 5");
-        feijao.add   ("1 - Feijão Preto           1 kg    R$ 6");
-        feijao.add   ("2 - Feijão Carioca         2 kg    R$ 9");
-        feijao.add   ("3 - Feijão Preto           2 kg    R$ 11");
+        feijao.add   ("0 - Feijão Carioca           1 kg        R$ 5");
+        feijao.add   ("1 - Feijão Preto             1 kg        R$ 6");
+        feijao.add   ("2 - Feijão Carioca           2 kg        R$ 9");
+        feijao.add   ("3 - Feijão Preto             2 kg        R$ 11");
         v[0] = 5;         v[1] = 6;        v[2] = 9;        v[3] = 11;
 
         ArrayList acucar = new ArrayList<String>();
-        acucar.add   ("0 - Açúcar Refinado        1 kg    R$ 4");
-        acucar.add   ("1 - Açúcar Cristal         1 kg    R$ 5");
+        acucar.add   ("0 - Açúcar Refinado          1 kg        R$ 4");
+        acucar.add   ("1 - Açúcar Cristal           1 kg        R$ 5");
 
 
         ArrayList cafe = new ArrayList<String>();
-        cafe.add     ("0 - Café torrado e moído    250 g   R$ 18");
-        cafe.add     ("1 - Café torrado e moído    500 g   R$ 32");
+        cafe.add     ("0 - Café torrado e moído     250 g       R$ 18");
+        cafe.add     ("1 - Café torrado e moído     500 g       R$ 32");
 
 
         ArrayList macarrao = new ArrayList<String>();
-        macarrao.add ("0 - Macarrão Espaguete      500 g   R$ 6");
-        macarrao.add ("1 - Macarrão Parafuso       500 g   R$ 6");
+        macarrao.add ("0 - Macarrão Espaguete       500 g       R$ 6");
+        macarrao.add ("1 - Macarrão Parafuso        500 g       R$ 6");
 
 
         ArrayList farinha = new ArrayList<String>();
-        farinha.add  ("0 - Farinha de trigo        500 g   R$ 5");
-        farinha.add  ("1 - Farinha de mandioca     500 g   R$ 5");
-        farinha.add  ("2 - Farinha de trigo        1 kg    R$ 9");
-        farinha.add  ("3 - Farinha de mandioca     1 kg    R$ 10");
+        farinha.add  ("0 - Farinha de trigo         500 g       R$ 5");
+        farinha.add  ("1 - Farinha de mandioca      500 g       R$ 5");
+        farinha.add  ("2 - Farinha de trigo         1 kg        R$ 9");
+        farinha.add  ("3 - Farinha de mandioca      1 kg        R$ 10");
 
 
         ArrayList tomate = new ArrayList<String>();
-        tomate.add    ("0 - Molho de tomate         300 g   R$ 3");
-        tomate.add    ("1 - Extrato de tomate       300 g   R$ 4");
+        tomate.add    ("Molho de tomate             300 g       R$ 3");
+        tomate.add    ("Extrato de tomate           300 g       R$ 4");
 
 
         // compra ////////////////////////////////////////////////////////////////////////
 
-        IO.println("    Arroz tipo 1            5 kg    R$ 25");
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Arroz = (qtd*25);
-        qtd=0;
-        IO.println(Arroz);
-        IO.println(" ");
+        System.out.println("Arroz tipo 1            5 kg        R$ 25");
+        System.out.println("Escolha uma quantidade:");
+        qtda = s.nextInt();
+        Arroz = (qtda*25);
+        System.out.println("R$ " + Arroz);
+        System.out.println(" ");
 
         for (i=0; i<feijao.size();i++) {
-            IO.println(feijao.get(i));
+            System.out.println(feijao.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(feijao.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Feijao = (qtd*v[item]);
-        qtd=0;
-        IO.println(Feijao);
-        IO.println(" ");
+        System.out.println(feijao.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtdb = s.nextInt();
+        Feijao = (qtdb*v[item]);
+        System.out.println("R$ " + Feijao);
+        System.out.println(" ");
 
 
-        IO.println("Óleo de soja (900 ml) - R$ 6");
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Oleo = (qtd*6);
-        qtd=0;
-        IO.println(Oleo);
-        IO.println(" ");
+        System.out.println("Óleo de soja            900 ml      R$ 6");
+        System.out.println("Escolha uma quantidade:");
+        qtdc = s.nextInt();
+        Oleo = (qtdc*6);
+        System.out.println("R$ " + Oleo);
+        System.out.println(" ");
 
 
         for (i=0; i<acucar.size();i++) {
-            IO.println(acucar.get(i));
+            System.out.println(acucar.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(acucar.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
+        System.out.println(acucar.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtdd = s.nextInt();
         v[0] = 4;         v[1] = 5;
-        Acucar = (qtd*v[item]);
-        qtd=0;
-        IO.println(Acucar);
-        IO.println(" ");
+        Acucar = (qtdd*v[item]);
+        System.out.println("R$ " + Acucar);
+        System.out.println(" ");
 
 
         for (i=0; i<cafe.size();i++) {
-            IO.println(cafe.get(i));
+            System.out.println(cafe.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(cafe.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
+        System.out.println(cafe.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtde = s.nextInt();
         v[0] = 18;         v[1] = 32;
-        Cafe = (qtd*v[item]);
-        qtd=0;
-        IO.println(Cafe);
-        IO.println(" ");
+        Cafe = (qtde*v[item]);
+        System.out.println("R$ " + Cafe);
+        System.out.println(" ");
 
 
         for (i=0; i<macarrao.size();i++) {
-            IO.println(macarrao.get(i));
+            System.out.println(macarrao.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(macarrao.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Macarrao = (qtd*6);
-        qtd=0;
-        IO.println(Macarrao);
-        IO.println(" ");
+        System.out.println(macarrao.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtdf = s.nextInt();
+        Macarrao = (qtdf*6);
+        System.out.println("R$ " + Macarrao);
+        System.out.println(" ");
 
 
         for (i=0; i<farinha.size();i++) {
-            IO.println(farinha.get(i));
+            System.out.println(farinha.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(farinha.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
+        System.out.println(farinha.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtdg = s.nextInt();
         v[0] = 5;         v[1] = 5;        v[2] = 9;        v[3] = 10;
-        Farinha = (qtd*v[item]);
-        qtd=0;
-        IO.println(Farinha);
-        IO.println(" ");
+        Farinha = (qtdg*v[item]);
+        System.out.println("R$ " + Farinha);
+        System.out.println(" ");
 
 
-        IO.println("Fubá de milho (500 g) - R$ 4");
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Fuba = (qtd*4);
-        qtd=0;
-        IO.println(Fuba);
-        IO.println(" ");
+        System.out.println("Fubá de milho           500 g       R$ 4");
+        System.out.println("Escolha uma quantidade:");
+        qtdh = s.nextInt();
+        Fuba = (qtdh*4);
+        System.out.println("R$ " + Fuba);
+        System.out.println(" ");
 
 
         for (i=0; i<tomate.size();i++) {
-            IO.println(tomate.get(i));
+            System.out.println(tomate.get(i));
         }
-        IO.println("Escolha uma opção");
+        System.out.println("Escolha uma opção");
         item = s.nextInt();
-        IO.println(tomate.get(item));
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
+        System.out.println(tomate.get(item));
+        System.out.println("Escolha uma quantidade:");
+        qtdi = s.nextInt();
         v[0] = 3;         v[1] = 4;
-        Tomate = (qtd*v[item]);
-        qtd=0;
-        IO.println(Tomate);
-        IO.println(" ");
+        Tomate = (qtdi*v[item]);
+        System.out.println("R$ " + Tomate);
+        System.out.println(" ");
 
 
-        IO.println("Sal refinado (1 kg) - R$ 2");
-        IO.println("Escolha uma quantidade:");
-        qtd = s.nextInt();
-        Sal = (qtd*2);
-        qtd=0;
-        IO.println(Sal);
-        IO.println(" ");
+        System.out.println("Sal refinado            1 kg        R$ 2");
+        System.out.println("Escolha uma quantidade:");
+        qtdj = s.nextInt();
+        Sal = (qtdj*2);
+        System.out.println("R$ " + Sal);
+        System.out.println(" ");
 
-        if (Arroz+Feijao+Oleo+Acucar+Cafe+Macarrao+Farinha+Fuba+Tomate+Sal))
-        
-        IO.println("O seu total ficou" + Arroz+Feijao+Oleo+Acucar+Cafe+Macarrao+Farinha+Fuba+Tomate+Sal);
+        Total = (Arroz+Feijao+Oleo+Acucar+Cafe+Macarrao+Farinha+Fuba+Tomate+Sal);
+
+        System.out.println("Arroz tipo 1            5 kg        R$ 25" + " x " + qtda);
+        System.out.println((feijao.get(item)) + " x " + qtdb);
+        System.out.println("Óleo de soja            900 ml      R$ 6" + " x " + qtdc);
+        System.out.println(acucar.get(item)) + " x " + qtdd;
+        System.out.println(cafe.get(item)) + " x " + qtde;
+        System.out.println(macarrao.get(item)) + " x " + qtdf;
+        System.out.println(farinha.get(item)) + " x " + qtdg;
+        System.out.println("Fubá de milho           500 g       R$ 4") + " x " + qtdh;
+        System.out.println(tomate.get(item)) + " x " + qtdi;
+        System.out.println("Sal refinado            1 kg        R$ 2") + " x " + qtdj;
 
 
+        if ((Total)>100) {
+            Valor = (Total - ((Total/100)*10));
+            System.out.println("O seu total ficou " + Total);
+            System.out.println("O seu total com o desconto de 10% ficou R$ " + Valor);
+        }
+        else {
+            System.out.println("O seu total ficou R$ " + Total);
+        }
     }
 }
