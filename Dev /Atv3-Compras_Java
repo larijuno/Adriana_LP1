@@ -199,7 +199,6 @@ public class compras {
             System.out.println("O seu total com o desconto de 10% ficou R$ " + Valor);
         }
         else {
-
             System.out.println("O seu total ficou R$ " + Total);
         }
     }
