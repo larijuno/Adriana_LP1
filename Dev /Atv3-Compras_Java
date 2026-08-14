@@ -19,12 +19,12 @@ public class compras {
     //Leia o valor da compra. Se o valor for maSystem.outr que R$ 100, aplique o desconto;
     //Caso contrárSystem.out, mantenha o preço original.
 
-    //Mostre a listagem do caixa contendo item, quantidade, preço  parcial e o valor final a ser pago da compra.
+    // a listagem do caixa contendo item, quantidade, preço  parcial e o valor final a ser pago da compra.
 
     void main () {
         int i,item;
         float Valor,Total,Arroz,Feijao,Oleo,Acucar,Cafe,Macarrao,Farinha,Fuba,Tomate,Sal;
-        int qtd,qtda,qtdb,qtdc,qtdd,qtde,qtdf,qtdg,qtdh,qtdi,qtdj,qtdk;
+        int qtd,qtda,qtdb,qtdc,qtdd,qtde,qtdf,qtdg,qtdh,qtdi,qtdj;
         float desconto,total;
         Scanner s = new Scanner(System.in);
 
@@ -61,13 +61,13 @@ public class compras {
 
 
         ArrayList tomate = new ArrayList<String>();
-        tomate.add    ("Molho de tomate             300 g       R$ 3");
-        tomate.add    ("Extrato de tomate           300 g       R$ 4");
+        tomate.add   ("0 - Molho de tomate          300 g       R$ 3");
+        tomate.add   ("1 - Extrato de tomate        300 g       R$ 4");
 
 
         // compra ////////////////////////////////////////////////////////////////////////
 
-        System.out.println("Arroz tipo 1            5 kg        R$ 25");
+        System.out.println("    Arroz tipo 1             5 kg        R$ 25");
         System.out.println("Escolha uma quantidade:");
         qtda = s.nextInt();
         Arroz = (qtda*25);
@@ -87,7 +87,7 @@ public class compras {
         System.out.println(" ");
 
 
-        System.out.println("Óleo de soja            900 ml      R$ 6");
+        System.out.println("    Óleo de soja             900 ml      R$ 6");
         System.out.println("Escolha uma quantidade:");
         qtdc = s.nextInt();
         Oleo = (qtdc*6);
@@ -150,7 +150,7 @@ public class compras {
         System.out.println(" ");
 
 
-        System.out.println("Fubá de milho           500 g       R$ 4");
+        System.out.println("    Fubá de milho            500 g       R$ 4");
         System.out.println("Escolha uma quantidade:");
         qtdh = s.nextInt();
         Fuba = (qtdh*4);
@@ -172,7 +172,7 @@ public class compras {
         System.out.println(" ");
 
 
-        System.out.println("Sal refinado            1 kg        R$ 2");
+        System.out.println("    Sal refinado             1 kg        R$ 2");
         System.out.println("Escolha uma quantidade:");
         qtdj = s.nextInt();
         Sal = (qtdj*2);
@@ -181,24 +181,25 @@ public class compras {
 
         Total = (Arroz+Feijao+Oleo+Acucar+Cafe+Macarrao+Farinha+Fuba+Tomate+Sal);
 
-        System.out.println("Arroz tipo 1            5 kg        R$ 25" + " x " + qtda);
+        System.out.println("    Arroz tipo 1             5 kg        R$ 25" + " x " + qtda);
         System.out.println((feijao.get(item)) + " x " + qtdb);
-        System.out.println("Óleo de soja            900 ml      R$ 6" + " x " + qtdc);
-        System.out.println(acucar.get(item)) + " x " + qtdd;
-        System.out.println(cafe.get(item)) + " x " + qtde;
-        System.out.println(macarrao.get(item)) + " x " + qtdf;
-        System.out.println(farinha.get(item)) + " x " + qtdg;
-        System.out.println("Fubá de milho           500 g       R$ 4") + " x " + qtdh;
-        System.out.println(tomate.get(item)) + " x " + qtdi;
-        System.out.println("Sal refinado            1 kg        R$ 2") + " x " + qtdj;
+        System.out.println("    Óleo de soja             900 ml      R$ 6" + " x " + qtdc);
+        System.out.println((acucar.get(item)) + " x " + qtdd);
+        System.out.println((cafe.get(item)) + " x " + qtde);
+        System.out.println((macarrao.get(item)) + " x " + qtdf);
+        System.out.println((farinha.get(item)) + " x " + qtdg);
+        System.out.println("    Fubá de milho            500 g       R$ 4" + " x " + qtdh);
+        System.out.println((tomate.get(item)) + " x " + qtdi);
+        System.out.println("    Sal refinado             1 kg        R$ 2" + " x " + qtdj);
 
-
+        System.out.println(" ");
         if ((Total)>100) {
             Valor = (Total - ((Total/100)*10));
             System.out.println("O seu total ficou " + Total);
             System.out.println("O seu total com o desconto de 10% ficou R$ " + Valor);
         }
         else {
+
             System.out.println("O seu total ficou R$ " + Total);
         }
     }
