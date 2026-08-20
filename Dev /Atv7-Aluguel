@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class aluguel {
+public class Aluguel {
 
     //Leia a quantidade de dias e a quilometragem percorrida.
     // Calcule o preço do aluguel considerando uma diária fixa
     // e uma cobrança adicional por quilômetro acima de determinado limite.
 
-    void main (){
+    void alugar (){
         int dia;
         float km, limiteKm, precoBase, kmExtra, taxaExtra, precoTotal;
         Scanner s = new Scanner(System.in);
