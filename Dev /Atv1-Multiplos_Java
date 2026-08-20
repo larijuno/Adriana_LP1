@@ -4,9 +4,9 @@ import java.util.Scanner;
 //Processamento: Verificar se o primeiro é múltiplo do segundo.
 //Saída: Resultado da verificação.
 
-public class Multiplos {
+public class Multiplo {
 
-void main (){
+void multiplicar (){
     int num1;
     int num2;
     int x;
