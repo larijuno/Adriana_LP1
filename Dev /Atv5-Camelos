@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Camelos {
+public class Camelo {
     //5-OS TRINTA E CINCO CAMELOS
     //— Somos irmãos — esclareceu o mais velho — e recebemos como herança esses 35 camelos.
     // Segundo a vontade expressa de meu pai, devo eu receber a metade,
@@ -15,7 +15,7 @@ public class Camelos {
     //Processamento: cálculo
     //Saída: lista com a quantidade de camelos para cada pessoa.
 
-    void main (){
+    void camelo (){
         int irmao1, irmao2,irmao3;
         int qtdCamelos;
         Scanner s = new Scanner(System.in);
