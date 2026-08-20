@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class compras {
+public class Compra {
 
     //3-Compra com desconto
     //Um supermercado oferece desconto de 10% para compras acima de R$ 100.
@@ -21,7 +21,7 @@ public class compras {
 
     // a listagem do caixa contendo item, quantidade, preço  parcial e o valor final a ser pago da compra.
 
-    void main () {
+    void comprar () {
         int i,item;
         float Valor,Total,Arroz,Feijao,Oleo,Acucar,Cafe,Macarrao,Farinha,Fuba,Tomate,Sal;
         int qtd,qtda,qtdb,qtdc,qtdd,qtde,qtdf,qtdg,qtdh,qtdi,qtdj;
