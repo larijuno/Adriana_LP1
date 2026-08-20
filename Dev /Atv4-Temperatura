@@ -5,7 +5,7 @@ public class Temperatura {
     // caso contrário, informe "Temperatura agradável". 
     // Em seguida, determine se em São José dos Campos a temperatura é, em geral, agradável ou faz frio.
     
-    void main() {
+    void temperatura () {
         int soma = 0;
         double media;
         String[] meses = {
