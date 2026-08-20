@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class viagem {
+public class Viagem {
 
     //Leia a distância da viagem e o preço do combustível.
     // Calcule quanto será gasto, considerando que o carro faz 12 km/L.
     // Se a viagem tiver mais de 500 km, aplique um desconto de 5% no custo calculado.
 
-    void main (){
+    void viajar (){
         int km,gas,gasto;
         float desconto,x;
         Scanner s = new Scanner(System.in);
