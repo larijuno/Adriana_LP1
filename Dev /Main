@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+
+    void main() {
+        int num;
+        Scanner s = new Scanner(System.in);
+        IO.println("Qual você deseja executar?");
+        IO.println();
+        IO.println("1 - Verificação de Múltiplo");
+        IO.println("2 - Sistema de Login Simplificado");
+        IO.println("3 - Compra com desconto");
+        IO.println("4 - Temperatura");
+        IO.println("5 - Os trinta e cinco camelos");
+        IO.println("6 - Calculadora de viagem");
+        IO.println("7 - Aluguel de carro");
+
+        num = s.nextInt();
+
+        if (num == 1) {
+            Multiplo m = new Multiplo();
+            m.multiplicar();
+
+        } else if (num == 2) {
+            Login l = new Login();
+            l.login();
+
+        } else if (num == 3) {
+            Compra c = new Compra();
+            c.comprar();
+
+        } else if (num == 4) {
+            Temperatura t = new Temperatura();
+            t.temperatura();
+
+        } else if (num == 5) {
+            Camelo i = new Camelo();
+            i.camelo();
+
+        } else if (num == 6) {
+            Viagem v = new Viagem();
+            v.viajar();
+
+        } else if (num == 7) {
+            Aluguel a = new Aluguel();
+            a.alugar();
+        }
+    }
+}
