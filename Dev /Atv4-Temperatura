@@ -1,10 +1,10 @@
 public class Temperatura {
-    
+
     //Uma estação meteorológica registrou a temperatura média do município de São José dos Campos.
-    // Leia cada temperatura em graus Celsius. Se estiver abaixo de 18 °C, informe "Frio"; 
-    // caso contrário, informe "Temperatura agradável". 
+    // Leia cada temperatura em graus Celsius. Se estiver abaixo de 18 °C, informe "Frio";
+    // caso contrário, informe "Temperatura agradável".
     // Em seguida, determine se em São José dos Campos a temperatura é, em geral, agradável ou faz frio.
-    
+
     void temperatura () {
         int soma = 0;
         double media;
