@@ -7,7 +7,7 @@ public class Login {
 //Processamento: Comparar com a senha cadastrada.
 //Saída: "Acesso permitido" ou "Acesso negado".
 
-    void logar () {
+    void login () {
         int senha;
         Scanner s = new Scanner(System.in);
 
