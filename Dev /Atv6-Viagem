@@ -7,7 +7,7 @@ public class Viagem {
     // Se a viagem tiver mais de 500 km, aplique um desconto de 5% no custo calculado.
 
     void viajar (){
-        int km,gas,gasto;
+        double km,gas,gasto;
         float desconto,x;
         Scanner s = new Scanner(System.in);
 
@@ -17,7 +17,7 @@ public class Viagem {
         IO.println("Digite o preço do combustível: ");
         gas=s.nextInt();
 
-        gasto = ((km/12)*gas);
+        gasto = ((km / 12.0)*gas);
 
         if (km>500) {
             desconto = ((gasto/100)*5);
@@ -26,7 +26,7 @@ public class Viagem {
             IO.println("O seu total com o desconto de 5%, pela viagem ser de mais de 500km, ficou R$ " + x);
         }
         else {
-            IO.println("O seu total ficou " + gasto );
+            IO.println("O seu total ficou R$ " + gasto );
         }
     }
 }
