@@ -7,8 +7,7 @@ public class Viagem {
     // Se a viagem tiver mais de 500 km, aplique um desconto de 5% no custo calculado.
 
     void viajar (){
-        double km,gas,gasto;
-        float desconto,x;
+        double km,gas,gasto,desconto,x;
         Scanner s = new Scanner(System.in);
 
         IO.println("Digite a distância da viagem: ");
