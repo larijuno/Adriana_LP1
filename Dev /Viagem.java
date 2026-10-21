@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Viagem {
+
+    //Leia a distância da viagem e o preço do combustível.
+    // Calcule quanto será gasto, considerando que o carro faz 12 km/L.
+    // Se a viagem tiver mais de 500 km, aplique um desconto de 5% no custo calculado.
+
+    void viajar (){
+        double km, gas,gasto,desconto,x;
+        Scanner s = new Scanner(System.in);
+
+        IO.println("Digite a distância da viagem: ");
+        km=s.nextInt();
+
+        IO.println("Digite o preço do combustível: ");
+        gas=s.nextInt();
+
+        gasto = ((km / 12.0)*gas);
+
+        if (km>500) {
+            desconto = ((gasto/100)*5);
+            x = (gasto - desconto);
+            IO.println("O seu total ficou " + gasto );
+            IO.println("O seu total com o desconto de 5%, pela viagem ser de mais de 500km, ficou R$ " + x);
+        }
+        else {
+            IO.println("O seu total ficou R$ " + gasto );
+        }
+    }
+}
