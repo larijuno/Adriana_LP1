@@ -26,7 +26,7 @@ public class Temperatura {
             soma += temp[i];
         }
 
-        media = soma/12;
+        media = soma/12.0;
         IO.println("Média anual de 2025: " + media + "ºC");
         if (media < 18) {
             IO.println("Em geral, a temperatura em São José dos Campos é fria.");
